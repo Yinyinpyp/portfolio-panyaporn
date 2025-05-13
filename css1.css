@@ -1,0 +1,1067 @@
+* {
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+html, body {
+    height: 100%; /* ตั้งค่าความสูงให้เต็ม */
+    margin: 0; /* ลบ margin เริ่มต้น */
+}
+
+
+body {
+
+    background-color: #ffffff;
+    color: #333;
+    font-family: 'Roboto', sans-serif; /* เปลี่ยนเป็นชื่อฟอนต์ที่คุณเลือก */
+    
+    
+}
+html {
+    scroll-behavior: smooth;
+  }
+
+@font-face {
+    font-family: 'MyCustomFont'; /* ชื่อฟอนต์ที่คุณกำหนดเอง */
+    src: url('/path/to/font/MyCustomFont.woff2') format('woff2'),
+         url('/path/to/font/MyCustomFont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'MyCustomFont', sans-serif; /* ใช้ฟอนต์ที่กำหนด */
+}
+
+
+
+
+.container {
+    display: grid; /* ใช้ Grid Layout */
+    grid-template-columns: 95px 1fr; /* กำหนดความกว้างของคอลลัม */
+    height: 100vh; /* ให้ความสูงเต็มหน้าจอ */
+    position: fixed; /* หรือใช้ absolute ได้ขึ้นอยู่กับกรณีการใช้งาน */
+    top :0;
+    left: 0; /* กำหนดให้อยู่ทางซ้ายสุด */
+    color: #F8F5F5;
+    overflow: auto;
+}
+
+.sidebar {
+    background-color: #f0f0f0; /* สีพื้นหลังของแถบ */
+    padding: 30px; /* เพิ่ม padding */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* เพิ่มเงา */
+}
+
+.sidebar a {
+    color: #FFAE58;
+    font-size: 25px;
+    font-weight: bold;
+    position: fixed; /* <- ใช้ fixed เท่านั้น */
+    text-decoration: none;
+    top: -10px;
+    z-index: 999999; /* ลองเพิ่มค่ามากขึ้นอีกได้ */
+}
+.anuphan-text {
+  font-family: "Anuphan", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400; /* เปลี่ยนค่านี้ตามความหนาที่ต้องการ เช่น 100, 300, 400, 700 */
+  font-style: normal;
+}
+
+
+
+
+
+
+.logo {
+    max-width: 100%; /* ทำให้โลโก้ไม่เกินขนาด */
+    height: auto; /* รักษาอัตราส่วน */
+    margin-bottom: 20px; /* เพิ่มระยะห่างด้านล่าง */
+    width: 100%;
+    
+}
+
+.main-content {
+    padding: 20px; /* เพิ่ม padding */
+    overflow: auto; /* ให้เนื้อหาสามารถเลื่อนเมื่อเกินพื้นที่ */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* สำคัญมาก: กันล้นเพราะ padding */
+  }
+  
+  header {
+    position: fixed;
+    top: 0;
+    right: 80px;
+    width: 100vw;
+    padding: 20px 80px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    z-index: 999;
+    transition: transform 0.3s ease-in-out;
+    overflow-x: hidden;
+  }
+
+  
+  
+  
+
+  
+  
+
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    height: 70px;
+    padding: 10px 20px;
+    background-color: #aa7b7b;
+  }
+  
+  nav h1, nav ul {
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+  
+  
+  nav h1 {
+    margin: 0;
+    padding: 0 10px;
+    font-family: 'Tuffy', serif;
+    font-size: 30px;
+    color: #f0f0f0;
+    flex: 1; /* ให้ใช้พื้นที่เท่าที่มี */
+  }
+  
+
+
+
+  nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #aa7b7b;
+    z-index: 1000;
+    font-size: 30px;
+    padding: 10px 20px;
+    color: #ffffff; /* ตัวหนังสือเริ่มต้นเป็นสีขาว */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+nav h1 {
+  position: relative; /* หรือจะไม่ใส่ก็ได้ถ้าไม่ได้ใช้ positioning แบบพิเศษ */
+  right: 300px;             /* จัดให้อยู่ชิดซ้าย */
+  color: #f0f0f0;
+  font-size: 30px;
+  margin-left: 500px;      /* เผื่อมี margin */
+  padding-left: 0;
+  text-align: left;
+}
+
+nav h1 {
+  font-family: 'Tuffy', serif;
+  font-size: 30px;
+  color: #f0f0f0;
+}
+
+
+
+nav.scrolled {
+    background-color: white;
+    color: #000000;
+}
+
+
+
+nav a {
+  font-family: 'Tuffy', serif;
+  font-size: 20px;
+  color: #f0f0f0;
+  margin-left: 100px;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow-x: auto;
+    justify-content: flex-end;  /* เมนูชิดขวา */
+    color: #000000;
+}
+
+
+  
+  li {
+    margin: 0 10px;
+  }
+  
+  a {
+    text-decoration: none;
+    white-space: nowrap; /* ไม่ตัดคำ */
+  }
+  
+
+a:hover {
+    background-color: #f0f0f0; /* เปลี่ยนสีพื้นหลังเมื่อ hover */
+}
+
+
+.animated-title {
+  display: inline-block;
+  font-size: 2.5rem;
+  font-family: 'Courier New', monospace;
+  color: #333;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #333;
+  min-width: 320px; /* ปรับขนาดตามข้อความยาวสุด */
+  height: 100px;      /* ป้องกันขยับแนวตั้ง */
+  margin-left: 0px;
+  font-family: 'Poppins', sans-serif;
+  
+}
+
+
+#typewriter {
+  display: inline-block;
+  min-width: 240px; /* หรือกว้างพอสำหรับ "Panyaporn Kiatrungrit" */
+  font-size: 50px;
+}
+
+
+
+
+
+/* การเคลื่อนที่จากซ้าย */
+@keyframes slideIn {
+    0% {
+        transform: translateX(-20px); /* เริ่มจากซ้าย */
+        opacity: 0; /* เริ่มจากมองไม่เห็น */
+    }
+    100% {
+        transform: translateX(0); /* ย้ายมาที่ตำแหน่งเดิม */
+        opacity: 1; /* มองเห็นเต็มที่ */
+    }
+}
+
+/* การสั่นสะเทือน */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+
+
+
+.profile-picture {
+    display: flex;
+    justify-content: flex-end; /* จัดให้รูปอยู่ทางขวาของคอนเทนเนอร์ */
+}
+.profile-picture img {
+    width: 350px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    right: 90px;
+    top: 50px; /* ค่านี้ยิ่งน้อย → ยิ่งขยับขึ้น */
+  }
+  
+
+
+
+
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 50px;
+}
+.intro img {
+  width: 55%;
+  height: auto;
+  float: left;
+  margin-left: 730px;
+  margin-top: -50px;
+
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  /* เริ่มต้นแบบโปร่งใสและเลื่อนไปทางขวา */
+  opacity: 0;
+  transform: translateX(100px);
+  
+  /* เรียกใช้ animation ที่กำหนดไว้ */
+  animation: fadeInSlideRight 1.5s ease-out forwards;
+}
+
+
+@keyframes fadeInSlideRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px); /* ลอยมาจากขวา */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0); /* เข้าที่ */
+  }
+}
+
+
+
+
+
+.intro {
+  max-width: 50%;
+  position: absolute;
+  left: 200px;
+  top: 300px;
+
+
+}
+
+
+
+  
+
+
+.intro h2{
+  max-width: 50%;
+  position: absolute;
+  left: 200px; /* ลดจาก 150px → ขยับไปทางซ้าย */
+  top: 200px;  /* ลดจาก 250px → ขยับขึ้นบน */
+}
+
+.intro h1 {
+    font-size: 40px;
+    color: #333;
+}
+
+.intro h1 span {
+    color: #aa7b7b;
+}
+
+.intro p {
+    font-size: 30px;
+    margin: 10px 0;
+    margin-top: 40px;
+}
+
+.resume-btn {
+    background-color: #aa7b7b;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 8px;
+    font-weight: 500;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    position: relative;
+    z-index: 1000;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+
+
+
+
+.intro2 {
+    position: relative; /* ต้องกำหนดให้ตำแหน่งอ้างอิงได้ */
+}
+
+.intro2 img {
+    width: 120%;
+    height: 10%;
+    position: relative;
+    left: -100px;
+    top: 200px;
+
+}
+
+
+.intro-btn {
+    background-color: #e6e6e6;
+    color: #b68d8d;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 12px;
+    border-radius: 5px;
+    margin-top: 50px; /* ขยับปุ่มลงมา 20px */
+    margin-left: 90px;
+}
+.icon-container img {
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+    margin-top: 15px;
+    padding: 0;
+    display: block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* เงาด้านล่างนุ่ม ๆ */
+    border-radius: 8px; /* ถ้าอยากให้มุมมนนิด ๆ ก็ดูสวยขึ้น */
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .icon-container img:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* เพิ่มเงาเวลา hover */
+  }
+  
+  
+  
+  .icon-container img {
+    width: 40px;   /* ปรับขนาดรูป */
+    height: 40px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .icon-container img:hover {
+    transform: scale(1.1); /* ขยายเล็กน้อยเวลา hover */
+  }
+
+  .icon-container1 img {
+    width: 10px;
+    height: 10px;
+    margin: 5px;
+    margin-top: 15px;
+    padding: 0;
+    display: block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* เงาด้านล่างนุ่ม ๆ */
+    border-radius: 8px; /* ถ้าอยากให้มุมมนนิด ๆ ก็ดูสวยขึ้น */
+    transition: box-shadow 0.3s ease;
+
+    position: relative;
+    z-index: 10;
+
+  }
+  
+
+  
+  
+
+
+/* กำหนดสไตล์เริ่มต้น */
+.nav-link {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* เมื่อชี้เมาส์ */
+.nav-link:hover {
+  color: #afacaa;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* เมื่ออยู่ในตำแหน่งที่ต้องการ */
+.nav-link.active {
+  color: #595959; /* เปลี่ยนเป็นสีดำ */
+  font-weight: bold;
+}
+
+
+  .content {
+    height: 100vh; /* ให้แต่ละ section ครอบคลุมความสูงเต็มจอ */
+    padding: 20px;
+    border: 1px solid #ccc;
+  }
+  
+  
+  
+.seeall {
+    background-color: #DBB5B5;
+    color: #534c4c;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 999px; /* ทำให้ปุ่มเป็นวงรี */
+    top: 50px;
+    margin-left: 90px;
+}
+
+/* กำหนดฟอนต์ใน CSS */
+/* กำหนดฟอนต์ Cascadia Mono */
+
+/* ใช้ฟอนต์ Cascadia Mono ใน .skills */
+/* ใช้ฟอนต์ Cascadia Mono */
+.cascadia-mono {
+    font-family:  'Tuffy', serif, sans-serif;
+    font-weight: 400; /* กำหนดน้ำหนักตัวอักษร (ตัวอย่าง 400 คือปกติ) */
+    font-style: normal; /* กำหนดสไตล์เป็นปกติ */
+    font-optical-sizing: auto; /* ใช้ขนาดฟอนต์ที่เหมาะสมตามสไตล์ */
+    margin-left: 10px;
+  }
+  
+
+  
+
+
+
+
+  
+  #video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100vw;
+    min-height: 20vh;
+    object-fit: cover;
+    z-index: -1;
+    display: block; /* ให้แสดงปกติในจอใหญ่ */
+  }
+  
+  /* ซ่อนวิดีโอเมื่อหน้าจอเล็กกว่า 768px */
+  @media (max-width: 768px) {
+    #video-background {
+      display: none;
+    }
+  
+    body {
+      background-color: #e7cfcf; /* หรือสีพื้นหลังที่คุณต้องการ */
+    }
+  }
+  
+
+
+
+
+
+.skills {
+  background-color: rgba(170, 123, 123, 0.7); /* ปรับค่าความโปร่ง (0-1) */
+  padding: 50px 30px;
+  color: #000000;
+  margin-top: 750px;
+  margin-left: 700px;
+  width: 60%;
+  max-width: 800px;
+  border-radius: 10px; /* เพิ่มความโค้งขอบถ้าต้องการให้ดูนุ่มนวล */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* เพิ่มเงาให้ดูเด่น */
+}
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-out;
+  }
+  
+  .reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  
+  
+  .skills h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    margin-left: 10px;
+  }
+  
+  .skills ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .skills li {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+  }
+  .contact-info {
+    bottom: 0; /* อยู่ที่ขอบล่างของหน้าจอ */
+    left: 0; /* เริ่มจากขอบซ้ายสุด */
+    width: 100%; /* ให้กว้างเต็มหน้าจอ */
+    display: flex; /* ใช้ Flexbox */
+    flex-direction: row; /* ตั้งค่าเป็นแถว (แนวนอน) */
+    justify-content: center; /* จัดกลางในแนวนอน */
+    align-items: center; /* จัดกลางในแนวตั้ง */
+    text-align: center; /* จัดข้อความให้อยู่กลาง */
+    background-color: #fff; /* เพิ่มพื้นหลังเพื่อให้ชัดเจน */
+    padding: 10px 0; /* เพิ่ม padding ด้านบนและล่าง */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* เพิ่มเงาให้ดูเด่น */
+    z-index: 1000; /* ให้อยู่ด้านบนสุด */
+}
+
+
+
+.contact-info div {
+    margin: 0 15px; /* เว้นระยะห่างด้านซ้ายและขวา */
+}
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #ffffff; /* สีปกติ */
+  transition: color 0.3s ease;
+}
+
+nav.scrolled ul li a {
+  color: #aa7b7b; /* สีเมื่อเลื่อนลง */
+}
+
+
+nav ul li a:hover {
+    color: #afacaa; /* สีที่เปลี่ยนเมื่อชี้เมาส์ */
+}
+
+
+
+.animated-title {
+    position: relative;
+    left: 10px;
+    top: 40px;
+    font-size: 15px; /* ← เปลี่ยนจาก 28px เป็น 32px */
+    color: #333;
+    font-weight: bold;
+    line-height: 1.8;
+    animation: fadeInMove 1.5s ease-out;
+}
+
+  
+  @keyframes fadeInMove {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .Service {
+    font-size: 30px; /* Adjust the size of the text */
+    padding: 100px 40px;
+    background-color: #DBB5B5;
+    margin-bottom: 20px; /* Space below the section */
+    text-align: center; /* Center the text */
+    color: #333; /* Text color */
+    font-weight: bold; /* Make the text bold */
+    font-family: 'Tuffy', serif; /* Apply the Joan font (or any font you prefer) */
+}
+
+.Service img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* เงาภาพ */
+  margin-top: 50px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* ลื่นเมื่อเปลี่ยน */
+}
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);  /* ทำให้เริ่มจากตำแหน่งต่ำลง */
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);  /* ลอยขึ้น */
+}
+
+
+.Service img:hover {
+  transform: translateY(-10px); /* เคลื่อนภาพขึ้นเล็กน้อย */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* เพิ่มเงาให้ชัดเจนขึ้น */
+}
+
+
+.Service img:hover {
+  transform: scale(1.05); /* ขยายเล็กน้อยเมื่อชี้ */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); /* เพิ่มเงาให้ลอยเด่นขึ้น */
+}
+.skills-container {
+  position: relative;
+  padding-left: 300px; /* เว้นที่สำหรับรูป */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.floating-image {
+  position: absolute;
+  top: 0px;
+  left: -590px;
+  width: 400px;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.skill {
+  background-color: #dbb5b5b3;
+  text-align: center;
+
+  display: flex;
+  flex-wrap: wrap; /* ทำให้ภาพสามารถย้ายไปแถวถัดไปได้ */
+  justify-content: center; /* จัดภาพให้อยู่กลาง */
+  width: 1000px; /* ให้กรอบเต็มขนาดความกว้างของ container ที่บรรจุ */
+  max-width: 1200px; /* จำกัดความกว้างสูงสุด */
+  height: 800px; /* กำหนดความสูงของกรอบ */
+  margin: 0 auto; /* จัดกรอบให้อยู่กลาง */
+  padding: 20px; /* เพิ่มพื้นที่ภายในกรอบ */
+  box-sizing: border-box;
+  margin-top: 90px;
+
+
+  border-radius: 20px; /* ขอบมน */
+  box-shadow: 0 8px 16px rgba(0, 0, 3, 0.3); /* เงา */
+}
+
+
+
+.skills-container {
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+
+  opacity: 0;
+  transform: translateX(-50px); /* เริ่มจากซ้าย */
+  animation: fadeInSlideLeft 1.2s ease-out forwards;
+}
+
+@keyframes fadeInSlideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px); /* เริ่มอยู่ทางซ้าย */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0); /* เข้าตำแหน่งเดิม */
+  }
+}
+
+
+
+.skills-image img {
+  max-width: 250px;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+.skill h1 {
+  font-size: 2rem; /* ขนาดฟอนต์ที่เหมาะสม */
+  margin-bottom: 40px;
+  color: #000000;
+  font-weight: bold;
+  font-family: 'Tuffy', serif;
+  position: relative; /* ใช้ position relative เพื่อให้สามารถขยับได้ */
+  left: 0px; /* ขยับไปทางขวา 20px */
+  top: 50px; /* ขยับขึ้น 10px */
+}
+
+
+
+
+.skill img {
+  width: 900px;
+  max-width: 250px; /* ขนาดสูงสุดของแต่ละภาพ */
+  height: auto;
+  margin: 20px; /* เพิ่มระยะห่างระหว่างภาพ */
+  display: inline-block; /* ให้ภาพเรียงกันในแถว */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  margin-top: 50px;
+  flex: 1 1 calc(33.333% - 40px);
+  box-shadow: 0 4px 8px rgb(255, 255, 255);
+}
+
+/* Optional: Responsive image container */
+.skill-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+
+.project {
+    margin-top: 100px;
+    padding: 100px 40px;
+    background-color: #DBB5B5;
+    font-size: 30px; /* Adjust the size of the text */
+    margin-bottom: 20px; /* Space below the section */
+    text-align: center; /* Center the text */
+    color: #333; /* Text color */
+    font-weight: bold; /* Make the text bold */
+    font-family: 'Joan', sans-serif; /* Apply the Joan font (or any font you prefer) */
+    margin-top: 100px;
+}
+
+
+
+.project img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-left: 90px;
+  margin-top: 90px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* เพิ่มความลื่นเมื่อเปลี่ยน */
+}
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.project img:hover {
+  transform: scale(1.05); /* ขยายขนาดเล็กน้อย */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* เพิ่มเงาเมื่อ hover */
+}
+
+
+.Certificates {
+    margin-top: 350px;
+    font-size: 30px; /* Adjust the size of the text */
+    margin-bottom: 20px; /* Space below the section */
+    text-align: center; /* Center the text */
+    color: #333; /* Text color */
+    font-weight: bold; /* Make the text bold */
+    font-family: 'Poppins', sans-serif; /* Apply the Joan font (or any font you prefer) */
+}   
+.Certificates img {
+    width: 100%;
+    margin-top: 500px;
+    max-width: 550px;
+    height: auto;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease; /* เพิ่มการเปลี่ยนแปลงแบบนุ่มนวล */
+}
+
+.Certificates img:hover {
+    transform: scale(1.10); /* ขยาย 5% เมื่อชี้ */
+}
+.Certificates h1 {
+    font-family: 'Tuffy', serif;
+}
+     
+
+.contect1 {
+    position: relative;
+    text-align: center; /* จัดให้อยู่กลาง */
+  }
+  
+  .contect1 img {
+    width: 100%; /* ให้ภาพมีความกว้าง 100% ของ container */
+    height: auto; /* ให้รักษาสัดส่วนภาพ */
+    max-width: 1200px; /* จำกัดขนาดความกว้างสูงสุด */
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    margin-top: 300px;
+  }
+  
+  .text-box {
+    position: absolute;
+    top: 75%; /* วางกล่องข้อความที่กึ่งกลางของภาพ */
+    left: 23%;
+    transform: translate(20%, -50%); /* จัดให้อยู่กลางทั้งในแนวนอนและแนวตั้ง */
+    background-color: rgba(175, 168, 168, 0); /* สีพื้นหลังแบบโปร่งแสง */
+    padding: 5px;
+    border-radius: 10px;
+    width: 40%; /* ขนาดกล่องข้อความที่พอเหมาะ */
+  }
+  
+  .text-box input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    margin-top: 20px;
+    margin-right: 10px;
+  }
+  
+  .text-box input::placeholder {
+    color: #fff;
+    opacity: 0.8;
+  }
+  #input2 {
+    height: 45px; /* หรือความสูงที่คุณต้องการ */
+    resize: vertical; /* อนุญาตให้ลากขยายได้ */
+  }
+  #input1 {
+    height: 45px; /* หรือความสูงที่คุณต้องการ */
+    resize: vertical; /* อนุญาตให้ลากขยายได้ */
+  }
+
+  #input3 {
+    height: 130px; /* หรือความสูงที่คุณต้องการ */
+    resize: vertical; /* อนุญาตให้ลากขยายได้ */
+  }
+  .send {
+    margin-top: 100px;
+    background-color: #8e8983;
+    color: #f7f7f7;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 999px; /* ทำให้ปุ่มเป็นวงรี */
+    top: 250px;
+    margin-left: 0px;
+    margin-top: 40px;
+}
+
+#portfolio1 {
+    scroll-margin-top: 1000px; /* เลื่อนเกินตำแหน่งขึ้นไปอีก 100px */
+  }
+
+  
+  .project2 {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 60px 40px;
+    text-align: center;
+    background: #f9f9f9b3;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+  }
+  
+  .project2 h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 40px;
+    font-family: 'Tuffy', serif;
+    margin-top: 50px;
+  }
+  
+  /* รูปภาพ */
+  .project2 .image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    gap: 20px;
+    justify-items: center;
+  }
+  
+  .project2 .image-grid img {
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .project2 .image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    position: relative;
+    overflow: visible; /* อนุญาตให้ภาพที่ขยายแสดงนอกกล่องได้ */
+  }
+  
+  .project2 .image-grid img {
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative; /* เพื่อให้ z-index ทำงาน */
+    z-index: 1;          /* ค่าพื้นฐาน */
+  }
+  
+  .project2 .image-grid img:hover {
+    transform: scale(1.1); /* ขยายขนาด */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.45);
+    z-index: 10;           /* ลอยอยู่ด้านบนสุด */
+  }
+  
+  
+
+  
+  
+  .project2 img {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease, box-shadow 0.4s ease, opacity 0.0s ease;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  
+  .project2 img.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Hover Effect */
+  .project2 img:hover {
+    transform: scale(1.15);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* ปุ่ม */
+
+  
+  .project2 a:hover {
+    background-color: #ffffff;
+  }
+  /* คลาสเฉพาะรูปที่ต้องการให้เปลี่ยน */
+.hover-image {
+  position: relative;
+  display: inline-block;
+}
+
+
+
+.hover-image:hover::after {
+  opacity: 1;
+}
+  
+
+
+
+
+
+  
+  
+
+
+
+  
